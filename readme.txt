@@ -15,6 +15,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This is a simple WeChat public platform plug-in for subscription accounts. Current version of the plug-in now supports ordinary subscription account only, anyone Register free WeChat public platform with subscription account can get full functionality of this plug-in, no need pay for a certified to upgrade your account.
 
+1. 默认自动回复消息
+2. 关键词自动回复消息
+3. 订阅自动回复欢迎消息
+4. 设置纯文本消息
+5. 设置图文消息
+6. 图文消息最多支持10条
+7. 可随时切换消息类型，排序等
+
 == Installation ==
 1. 下载走。
 2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
