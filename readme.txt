@@ -49,10 +49,6 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
 
 == Screenshots ==
-请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
-
-Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
-
 1. ![screenshot](/assets/screenshot-1.png)
 2. ![screenshot](/assets/screenshot-2.png)
 3. ![screenshot](/assets/screenshot-3.png)
