@@ -23,7 +23,8 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 6. 图文消息最多支持10条
 7. 可随时切换消息类型，排序等
 
-插件主页: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
+访问插件主页获得更多帮助: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
+
 
 == Installation ==
 汉语：
@@ -32,17 +33,26 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
 3. 玩儿者吧！
 
+请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
+
 英文:
 
 1. Download it.
 2. Copy to your wordpress plugins folder etc., /wp-content/plugins
 3. Enjoy it.
 
+Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
+
 == Frequently Asked Questions ==
 请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
+
 Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
 
 == Screenshots ==
+请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
+
+Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
+
 1. ![screenshot](/assets/screenshot-1.png)
 2. ![screenshot](/assets/screenshot-2.png)
 3. ![screenshot](/assets/screenshot-3.png)
