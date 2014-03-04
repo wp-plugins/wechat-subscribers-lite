@@ -26,10 +26,12 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 插件主页: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
 
 == Installation ==
+汉语：
 1. 下载走。
 2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
 3. 玩儿者吧！
 
+英文:
 1. Download it.
 2. Copy to your wordpress plugins folder etc., /wp-content/plugins
 3. Enjoy it.
