@@ -1,7 +1,7 @@
 === WeChat Subscribers Lite ===
 Contributors: redyyu
 Tags: weixin,wechat,subscribers,微信,微信公众平台,订阅号
-Donate link: http://www.redystyle.com
+Donate link: http://www.redystyle.com/wp_wechat/
 Requires at least: 3.7
 Tested up to: 3.8.1
 Stable tag: 3.8.1
