@@ -23,6 +23,8 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 6. 图文消息最多支持10条
 7. 可随时切换消息类型，排序等
 
+Plugin website is [WeChat Plugin](http://www.redystyle.com/wp_wechat “wechat plugin”).
+
 == Installation ==
 1. 下载走。
 2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
