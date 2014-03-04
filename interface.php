@@ -120,6 +120,9 @@ class wechatCallbackapi{
 		
 		if($keyword!=''){
 			foreach($this->data as $d){
+				if($d->trigger=='default' || $d->trigger=='subscribe'){
+					continue;
+				}
 				$curr_key=$d->key;
 				foreach($curr_key as $k){
 					if(strtolower($keyword) == strtolower(trim($k))){
