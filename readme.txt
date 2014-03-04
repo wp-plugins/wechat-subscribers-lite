@@ -23,7 +23,7 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 6. 图文消息最多支持10条
 7. 可随时切换消息类型，排序等
 
-Plugin website is [WeChat Plugin](http://www.redystyle.com/wp_wechat “wechat plugin”).
+插件主页: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
 
 == Installation ==
 1. 下载走。
