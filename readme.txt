@@ -15,13 +15,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This is a simple WeChat public platform plug-in for subscription accounts. Current version of the plug-in now supports ordinary subscription account only, anyone Register free WeChat public platform with subscription account can get full functionality of this plug-in, no need pay for a certified to upgrade your account.
 
-1. 默认自动回复消息
-2. 关键词自动回复消息
-3. 订阅自动回复欢迎消息
-4. 设置纯文本消息
-5. 设置图文消息
-6. 图文消息最多支持10条
-7. 可随时切换消息类型，排序等
+1. 便捷管理多种消息模版，可随时切换，数量不限。
+2. 默认自动回复消息
+3. 关键词自动回复消息
+4. 订阅自动回复欢迎消息
+5. 设置纯文本消息
+6. 设置图文消息
+7. 图文消息最多支持10条
+8. 可随时切换消息类型，排序等
 
 访问插件主页获得更多帮助: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
 
