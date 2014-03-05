@@ -13,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 =汉语=
+
 这是一个简单通用的微信公众平台订阅号专用插件。现在这个版本的插件只支持普通订阅号，任何人只要以个人身份免费注册微信公众平台就可以足以使用这个插件的全部功能，不需要转门为了这个插件去付费获得公众号认证。
 如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
 我将尽可能在每月的第一周发布新版本更新。
