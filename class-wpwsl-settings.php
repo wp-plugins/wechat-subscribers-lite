@@ -91,6 +91,11 @@ class WPWSL_Settings{
 
         foreach($input as $key=>$obj){        	
         	if(isset( $input[$key])){
+        		if($key=='token'){
+        			$obj=trim($obj);
+        			$obj=str_replace( ' ', '',$obj);
+        			$obj = preg_replace('/[^A-Za-z0-9\-_]/','',$obj);
+        		}
         	    $new_input[$key] = sanitize_text_field( $obj );
         	}
         }

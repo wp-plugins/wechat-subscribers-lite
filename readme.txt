@@ -35,7 +35,7 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 
 请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
 
-英文:
+English:
 
 1. Download it.
 2. Copy to your wordpress plugins folder etc., /wp-content/plugins
@@ -61,7 +61,17 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 10. ![screenshot](/assets/screenshot-10.png)
 
 == Changelog ==
-This is first version.
+汉语：
+
+2014年3月5日 更新到 1.01
+
+1. 修正了设置TOKEN时候可能误输入奇葩字符导致接口URL错误的问题。
+
+English:
+
+2014 March 5 Update to 1.01
+
+1. Fix strange symbol in 'token' will mass up interface url.
 
 == Upgrade Notice ==
-This is first version.
+Update to 1.01

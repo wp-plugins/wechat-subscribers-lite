@@ -31,7 +31,7 @@ require_once( 'content.php' );
 		        <th scope="row"><label>Token</label></th>
 		        <td>
 		        	<input type="text" name="<?php echo $this->option_name ;?>[token]" value="<?php echo $options['token'];?>" class="regular-text"/>
-		        	<p class="description"><?php _e('Access verification for your WeChat public platform. Only Latin letter, number and symbol.','WPWSL')?></p>
+		        	<p class="description"><?php _e('Access verification for your WeChat public platform. Only Latin letter, number, dash and underscore.','WPWSL')?></p>
 		        </td>
 	        </tr>
 	        <tr valign="top">
