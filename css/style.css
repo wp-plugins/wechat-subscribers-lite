@@ -105,6 +105,9 @@ WeChat Subscribers Lite
 .msg_conflict{
 	color: red;
 }
+.msg_disabled{
+	color: #ccc;
+}
 
 .wp-list-table .column-id {width: 5%;}
 .wp-list-table .column-title { width: 40%; }
