@@ -18,6 +18,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
 我将尽可能在每月的第一周发布新版本更新。
 
+很抱歉，1.02以前的版本中，当输入图文消息后，中文转换编码错误的问题，现在已经得到修正了。
+
 我的Wordpress插件将永久免费：）
 
 特色：
@@ -87,7 +89,7 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 2014年3月9日 更新到 1.02
 
 1. 修正了一些文本错误。
-
+2. 修正当输入图文消息后，中文转换编码错误的问题。
 
 2014年3月5日 更新到 1.01
 
@@ -97,8 +99,8 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 
 2014 March 9 Update to 1.02
 
-1. Fix some text issues.
-
+1. Fixed some text issues.
+2. Fixed json_encode() Chinese text unicode issues.
 
 2014 March 5 Update to 1.01
 

@@ -21,10 +21,18 @@ $raw=get_posts($args);
 $data = array();
 
 foreach($raw as $p){
-	$tmp_gp=get_post_meta($p->ID,'_phmsg_item');
+	$_gp=get_post_meta($p->ID,'_phmsg_item');
 	$phmsg_group=array();
-	foreach($tmp_gp as $tmp_item){
-		$phmsg_group[]=json_decode($tmp_item);
+	
+	foreach($_gp as $_item){
+		$_tmp_item=json_decode($_item);
+		
+		$_tmp_item->title=urldecode($_tmp_item->title);
+		$_tmp_item->pic=urldecode($_tmp_item->pic);
+		$_tmp_item->des=urldecode($_tmp_item->des);
+		$_tmp_item->url=urldecode($_tmp_item->url);
+	
+		$phmsg_group[]=$_tmp_item;
 	}
 	$tmp_key=trim(get_post_meta($p->ID,'_keyword',TRUE));
 	$array_key=explode(',', $tmp_key);
