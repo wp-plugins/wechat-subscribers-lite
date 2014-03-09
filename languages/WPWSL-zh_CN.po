@@ -244,6 +244,18 @@ msgstr "什么都没有。"
 msgid "Trigger by"
 msgstr "触发机制"
 
+#: class-wpwsl-general.php:38
+msgid "WeChat Subscribers"
+msgstr "微信订阅号"
+
+#: class-wpwsl-general.php:39
+msgid "General"
+msgstr "基本内容"
+
+#: class-wpwsl-settings.php:46
+msgid "WeChat Subscribers Settings"
+msgstr "微信订阅号设置"
+
 #: _settings.php:23 content.php:6 content.php:15
 msgid "WeChat Subscribers Lite"
 msgstr "微信公众平台订阅号管理插件"

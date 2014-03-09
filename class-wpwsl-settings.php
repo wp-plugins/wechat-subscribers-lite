@@ -2,8 +2,6 @@
 class WPWSL_Settings{
 	
 	private $page_slug=WPWSL_SETTINGS_PAGE;
-	private $page_title='WeChat Subscribers';
-	private $menu_title='WeChat Subscribers';
 	private $capability='edit_posts';
 	
 	private $option_group='wpwsl_settings_option_group';
@@ -45,10 +43,10 @@ class WPWSL_Settings{
      */
     public function add_plugin_page(){
         // This page will be under "Settings"
-        $page_title=$this->page_title;
-        $menu_title=$this->menu_title;
-        $capability=$this->capability;
-        $menu_slug=$this->page_slug;
+        $page_title=__('WeChat Subscribers Settings', 'WPWSL');
+        $menu_title=__('WeChat Subscribers Settings', 'WPWSL');
+        $capability='manage_options';
+        $menu_slug=WPWSL_SETTINGS_PAGE;
         
         add_options_page(
         	$page_title,

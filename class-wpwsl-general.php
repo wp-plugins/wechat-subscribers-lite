@@ -1,11 +1,6 @@
 <?php
 class WPWSL_General{
 	
-	private $parent_slug=WPWSL_GENERAL_PAGE;
-	private $page_slug=WPWSL_GENERAL_PAGE;
-	private $page_title='WeChat Subscribers';
-	private $menu_title='General';
-	private $capability='edit_posts';
 	
 	private $file_general_tpl='_general.php';
 	private $file_edit_tpl='_edit.php';
@@ -39,11 +34,11 @@ class WPWSL_General{
      */
     public function add_plugin_page(){
         // This page will be under "Settings"
-        $parent_slug=$this->parent_slug;
-        $page_title=$this->page_title;
-        $menu_title=$this->menu_title;
-        $capability=$this->capability;
-        $menu_slug=$this->page_slug;
+        $parent_slug=WPWSL_GENERAL_PAGE;
+        $page_title=__('WeChat Subscribers', 'WPWSL');
+        $menu_title=__('General', 'WPWSL');
+        $capability='edit_posts';
+        $menu_slug=WPWSL_GENERAL_PAGE;
         add_submenu_page( 
         	$parent_slug,
         	$page_title,

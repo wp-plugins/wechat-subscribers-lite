@@ -222,6 +222,18 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: class-wpwsl-general.php:38
+msgid "WeChat Subscribers"
+msgstr ""
+
+#: class-wpwsl-general.php:39
+msgid "General"
+msgstr ""
+
+#: class-wpwsl-settings.php:46
+msgid "WeChat Subscribers Settings"
+msgstr ""
+
 #: _settings.php:23 content.php:6 content.php:15
 msgid "WeChat Subscribers Lite"
 msgstr ""

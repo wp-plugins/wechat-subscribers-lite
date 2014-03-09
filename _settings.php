@@ -13,7 +13,7 @@ foreach($fields as $field){
 		$options[$field]='';
 	}
 }
-$interface_url=isset($options['token']) && $options['token']!=''?home_url().'?'.$options['token']:'none';
+$interface_url=isset($options['token']) && $options['token']!=''?home_url().'/?'.$options['token']:'none';
 
 //Load content
 require_once( 'content.php' );

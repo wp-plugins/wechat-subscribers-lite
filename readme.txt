@@ -84,15 +84,26 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 == Changelog ==
 =汉语=
 
+2014年3月9日 更新到 1.02
+
+1. 修正了一些文本错误。
+
+
 2014年3月5日 更新到 1.01
 
 1. 修正了设置TOKEN时候可能误输入奇葩字符导致接口URL错误的问题。
 
 =English=
 
+2014 March 9 Update to 1.02
+
+1. Fix some text issues.
+
+
 2014 March 5 Update to 1.01
 
 1. Fix strange symbol in 'token' will mass up interface url.
 
 == Upgrade Notice ==
+Update to 1.02
 Update to 1.01
