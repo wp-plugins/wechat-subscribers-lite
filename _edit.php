@@ -107,7 +107,7 @@ if(isset($_POST['submit-save-exit']) || isset($_POST['submit-save'])){
 	if(isset($_POST['title']) && isset($_POST['pic']) && isset($_POST['des']) && isset($_POST['url'])){
 		$phmsg_length=count($_POST['title']);
 		for($i=0; $i<$phmsg_length; $i++){
-			$_phmsg_group[$i]=array('title'=>$_POST['title'][$i],'pic'=>$_POST['pic'][$i],'des'=>$_POST['des'][$i],'url'=>$_POST['url'][$i]);
+			$_phmsg_group[$i]=array('title'=>urlencode($_POST['title'][$i]),'pic'=>urlencode($_POST['pic'][$i]),'des'=>urlencode($_POST['des'][$i]),'url'=>urlencode($_POST['url'][$i]));
 		}
 	}
 	delete_post_meta($current_id, '_phmsg_item');
@@ -165,7 +165,11 @@ if(!isset($_phmsg_main->title)){
 	$_phmsg_main->pic='';
 	$_phmsg_main->des='';
 	$_phmsg_main->url='';
-	
+}else{
+	$_phmsg_main->title=urldecode($_phmsg_main->title);
+	$_phmsg_main->pic=urldecode($_phmsg_main->pic);
+	$_phmsg_main->des=urldecode($_phmsg_main->des);
+	$_phmsg_main->url=urldecode($_phmsg_main->url);
 }
 $_current_pic=$_phmsg_main->pic==''?$default_pic:$_phmsg_main->pic;
 
@@ -173,7 +177,13 @@ $_current_pic=$_phmsg_main->pic==''?$default_pic:$_phmsg_main->pic;
 array_shift($_phmsg_group);
 $_tmp_phmsg_group=array();
 foreach($_phmsg_group as $item){
-	$_tmp_phmsg_group[]=json_decode($item);
+	$_tmp_item=json_decode($item);
+	$_tmp_item->title=urldecode($_tmp_item->title);
+	$_tmp_item->pic=urldecode($_tmp_item->pic);
+	$_tmp_item->des=urldecode($_tmp_item->des);
+	$_tmp_item->url=urldecode($_tmp_item->url);
+
+	$_tmp_phmsg_group[]=$_tmp_item;
 }
 $_phmsg_group=$_tmp_phmsg_group;
 
