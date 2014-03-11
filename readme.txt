@@ -18,7 +18,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
 我将尽可能在每月的第一周发布新版本更新。
 
-很抱歉，1.02以前的版本中，当输入图文消息后，中文转换编码错误的问题，现在已经得到修正了。
+“请求URL超时” 验证无法通过的问题，貌似已经修正。
+图文消息后，中文转换编码错误的问题也修正了。
 
 我的Wordpress插件将永久免费：）
 
@@ -86,6 +87,11 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 == Changelog ==
 =汉语=
 
+2014年3月12日 更新到 1.03
+
+1. 修正了 “请求URL超时” 的问题。
+2. 增加了Token最大字符数量限制。
+
 2014年3月9日 更新到 1.02
 
 1. 修正了一些文本错误。
@@ -96,6 +102,12 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 1. 修正了设置TOKEN时候可能误输入奇葩字符导致接口URL错误的问题。
 
 =English=
+
+2014 March 9 Update to 1.03
+
+1. Fixed URL Time Out problem.
+2. Add Token character limited
+
 
 2014 March 9 Update to 1.02
 
