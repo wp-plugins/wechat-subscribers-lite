@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WeChat Subscribers Lite
- * Plugin URI: http://www.redystyle.com/wp_wechat/
+ * Plugin URI: http://www.imredy.com/wp_wechat/
  * Description: 轻便易用的微信公众平台订阅号管理工具。Light weight WeChat (Subscribers) public platform management tool. 
  * Version: 1.03
  * Author: Redy Ru
- * Author URI: http://www.redystyle.com/
+ * Author URI: http://www.imredy.com/
  * License: GPLv2 or later
  * Text Domain: WPWSL
  * Domain Path: /languages

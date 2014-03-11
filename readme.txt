@@ -1,7 +1,7 @@
 === WeChat Subscribers Lite ===
 Contributors: redyyu
 Tags: weixin,wechat,subscribers,微信,微信公众平台,订阅号
-Donate link: http://www.redystyle.com/wp_wechat/
+Donate link: http://www.imredy.com/wp_wechat/
 Requires at least: 3.7
 Tested up to: 3.8.1
 Stable tag: 3.8.1
@@ -33,7 +33,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 5. 自由设置设置纯文本消息，图文消息，可随时切换消息类型，排序。
 6. 图片上传管理都使用Wordpress原生图片管理器。
 
-访问插件主页获得更多帮助: <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
+访问插件主页获得更多帮助: <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a>.
 
 =English=
 
@@ -48,7 +48,7 @@ Features:
 5. Free to set message type any time. both text message and graphic news message.
 6. Use native wordpress media manage tool to upload pitcures.
 
-Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a>.
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a>.
 
 
 == Installation ==
@@ -58,7 +58,7 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
 3. 玩儿者吧！
 
-请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
+请访问 <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> 获得帮助.
 
 =English=
 
@@ -66,12 +66,12 @@ Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.c
 2. Copy to your wordpress plugins folder etc., /wp-content/plugins
 3. Enjoy it.
 
-Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> get full help.
 
 == Frequently Asked Questions ==
-请访问 <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> 获得帮助.
+请访问 <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> 获得帮助.
 
-Please visit <a href="http://www.redystyle.com/wp_wechat">http://www.redystyle.com/wp_wechat</a> get full help.
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> get full help.
 
 == Screenshots ==
 1. ![screenshot](/assets/screenshot-1.png)
