@@ -98,7 +98,7 @@ require_once( 'content.php' );
 		<?php if(current_user_can('manage_options')):?>
 		<a href="<?php menu_page_url(WPWSL_SETTINGS_PAGE);?>"><?php _e('Settings','WPWSL');?></a>
 		<?php endif;?>
-		&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.redystyle.com/wp_wechat/" target="_blank"><?php _e('Help','WPWSL');?></a>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.imredy.com/wp_wechat/" target="_blank"><?php _e('Help','WPWSL');?></a>
 	</p>
 	<hr>
 	<h2><?php _e('Reply Templates','WPWSL');?> <a href="<?php menu_page_url(WPWSL_GENERAL_PAGE);?>&edit" class="add-new-h2"><?php _e('Add New Template','WPWSL');?></a></h2>
