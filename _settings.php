@@ -30,8 +30,8 @@ require_once( 'content.php' );
 	        <tr valign="top">
 		        <th scope="row"><label>Token</label></th>
 		        <td>
-		        	<input type="text" name="<?php echo $this->option_name ;?>[token]" value="<?php echo $options['token'];?>" class="regular-text"/>
-		        	<p class="description"><?php _e('Access verification for your WeChat public platform. Only Latin letter, number, dash and underscore.','WPWSL')?></p>
+		        	<input type="text" size="30" name="<?php echo $this->option_name ;?>[token]" value="<?php echo $options['token'];?>" class="regular-text"/>
+		        	<p class="description"><?php _e('Access verification for your WeChat public platform. Only Latin letter, number, dash and underscore. 30 character limited.','WPWSL')?></p>
 		        </td>
 	        </tr>
 	        <tr valign="top">
@@ -46,5 +46,5 @@ require_once( 'content.php' );
 		<?php submit_button(); ?>
 	</form>
 	<hr>
-	<?php echo $content['tips_contect'];?>
+	<?php echo $content['tips_content'];?>
 </div>

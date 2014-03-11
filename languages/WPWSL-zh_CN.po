@@ -267,10 +267,10 @@ msgstr "账号设置"
 #: _settings.php:34
 msgid ""
 "Access verification for your WeChat public platform. Only Latin letter, "
-"number, dash and underscore."
+"number, dash and underscore. 30 character limited."
 msgstr ""
 "提供给微信公众平台校验获取账号许可。只能是英文字母、数字、下划线、中划线，不"
-"允许使用任何汉字或者全脚符号。"
+"允许使用任何汉字或者全脚符号。最多允许30个字符。"
 
 #: _settings.php:41
 msgid ""

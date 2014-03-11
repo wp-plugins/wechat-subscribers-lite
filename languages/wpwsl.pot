@@ -243,7 +243,7 @@ msgid "Account Settings"
 msgstr ""
 
 #: _settings.php:34
-msgid "Access verification for your WeChat public platform. Only Latin letter, number, dash and underscore."
+msgid "Access verification for your WeChat public platform. Only Latin letter, number, dash and underscore. 30 character limited."
 msgstr ""
 
 #: _settings.php:41

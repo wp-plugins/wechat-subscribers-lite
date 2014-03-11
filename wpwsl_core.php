@@ -3,7 +3,7 @@
  * Plugin Name: WeChat Subscribers Lite
  * Plugin URI: http://www.redystyle.com/wp_wechat/
  * Description: 轻便易用的微信公众平台订阅号管理工具。Light weight WeChat (Subscribers) public platform management tool. 
- * Version: 1.02
+ * Version: 1.03
  * Author: Redy Ru
  * Author URI: http://www.redystyle.com/
  * License: GPLv2 or later
@@ -15,28 +15,26 @@ define('WPWSL_GENERAL_PAGE', 'wpwsl-general-page');
 define('WPWSL_SETTINGS_PAGE', 'wpwsl-settings-page');
 define('WPWSL_SETTINGS_OPTION', 'wpwsl_settings_option');
 
+
+//Interface
+$options=get_option(WPWSL_SETTINGS_OPTION);
+$token=isset($options['token'])?$options['token']:'';
+
+if($token!='' && isset($_GET[$token])){
+	require( 'interface.php' );
+}
+
 //Languages
 add_action('plugins_loaded', 'load_languages_file');
 function load_languages_file(){
 	load_plugin_textdomain( 'WPWSL', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
-//Interface
-add_action('init', 'wpwsl_token_setup');
-function wpwsl_token_setup(){
-		
-	$options=get_option(WPWSL_SETTINGS_OPTION);
-	$token=$options['token'];
-	if(isset($_GET[$token])){
-		require_once( 'interface.php' );
-	}
-	require_once( 'posttype_wpwsl_template.php' );
-}
 
 //Setup Admin
 add_action('_admin_menu', 'wpwsl_admin_setup');
 function wpwsl_admin_setup(){
-	
+	require_once( 'posttype_wpwsl_template.php' );
 	$page_title=__('WeChat Subscribers Lite', 'WPWSL');
 	$menu_title=__('WeChat Subscribers Lite', 'WPWSL');
 	$capability='edit_posts';

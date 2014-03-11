@@ -93,7 +93,7 @@ require_once( 'content.php' );
 <link href="<?php echo WPWSL_PLUGIN_URL;?>/css/style.css" rel="stylesheet">
 <div class="wrap">
 	<?php echo $content['header'];?>
-	<?php echo $content['tips_contect'];?>
+	<?php echo $content['tips_content'];?>
 	<p class="header_func">
 		<?php if(current_user_can('manage_options')):?>
 		<a href="<?php menu_page_url(WPWSL_SETTINGS_PAGE);?>"><?php _e('Settings','WPWSL');?></a>

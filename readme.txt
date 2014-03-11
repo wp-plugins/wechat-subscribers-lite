@@ -18,7 +18,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
 我将尽可能在每月的第一周发布新版本更新。
 
-“请求URL超时” 验证无法通过的问题，貌似已经修正。
+“请求URL超时” 验证无法通过的问题，貌似已经修正了。
 图文消息后，中文转换编码错误的问题也修正了。
 
 我的Wordpress插件将永久免费：）

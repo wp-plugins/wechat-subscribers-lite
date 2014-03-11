@@ -5,56 +5,18 @@
   * 
   *   
   */
-$options=get_option(WPWSL_SETTINGS_OPTION);
+global $token;
+
 define('IS_DEBUG', false);
 
-$args = array(
-		'post_type' => 'wpwsl_template',
-		'posts_per_page' => -1,
-		'orderby' => 'date',
-		'post_status' => 'publish',
-		'order'=> 'DESC'
-);
-
-$raw=get_posts($args);
-
-$data = array();
-
-foreach($raw as $p){
-	$_gp=get_post_meta($p->ID,'_phmsg_item');
-	$phmsg_group=array();
-	
-	foreach($_gp as $_item){
-		$_tmp_item=json_decode($_item);
-		
-		$_tmp_item->title=urldecode($_tmp_item->title);
-		$_tmp_item->pic=urldecode($_tmp_item->pic);
-		$_tmp_item->des=urldecode($_tmp_item->des);
-		$_tmp_item->url=urldecode($_tmp_item->url);
-	
-		$phmsg_group[]=$_tmp_item;
-	}
-	$tmp_key=trim(get_post_meta($p->ID,'_keyword',TRUE));
-	$array_key=explode(',', $tmp_key);
-	
-	
-	$tmp_msg=new stdClass();
-	
-	$tmp_msg->title=$p->post_title;
-	$tmp_msg->type=get_post_meta($p->ID,'_type',TRUE);
-	$tmp_msg->key=$array_key;
-	$tmp_msg->trigger=get_post_meta($p->ID,'_trigger',TRUE);
-	$tmp_msg->msg=get_post_meta($p->ID,'_content',TRUE);
-	$tmp_msg->phmsg=$phmsg_group;
-
-	$data[]=$tmp_msg;
-}
-
-$wechatObj = new wechatCallbackapi($options['token'], $data);
+$wechatObj = new wechatCallbackapi($token);
 
 $valid=$wechatObj->valid();
-if(!$valid){
-	wp_redirect(home_url());
+
+if($valid){
+	$wechatObj->responseMsg(get_data());
+}else{
+	header('Location: '.home_url());
 }
 exit;
 
@@ -63,28 +25,38 @@ class wechatCallbackapi{
 	private $token;
 	private $data;
 	
-	public function __construct($_token, $_data){
+	public function __construct($_token, $_data=null){
 		$this->token=$_token;
+		if($_data!=null){
+			$this->load($_data);
+		}
+	}
+	
+	public function load($_data){
 		$this->data=$_data;
 	}
-
 	
 	public function valid(){
 		if(isset($_GET["echostr"])){
 	    	$echoStr = $_GET["echostr"];
 	    }
-	
 	    //valid signature , option
 	    if($this->checkSignature()){
-	    	echo $echoStr;
-			$this->responseMsg();
+	    	if(isset($echoStr) && $echoStr!=''){
+	    		echo $echoStr;
+	    		exit;
+	    	}
 	    	return true;
 	    }else{
 	    	return false;
 	    }
 	}
 
-    public function responseMsg(){
+    public function responseMsg($_data=null){
+    	if($_data!=null){
+    		$this->load($_data);
+    	}
+    	
 		//get post data, May be due to the different environments
 		if(IS_DEBUG){
 			$postStr="<xml>
@@ -100,7 +72,7 @@ class wechatCallbackapi{
 		}
 		
       	//extract post data
-		if (!empty($postStr)){
+		if (!empty($postStr) && $this->checkSignature() && isset($this->data)){
                 
               	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
 				$msgType=$postObj->MsgType;
@@ -266,5 +238,51 @@ class wechatCallbackapi{
 			return false;
 		}
 	}
+}
+
+function get_data(){
+	$args = array(
+			'post_type' => 'wpwsl_template',
+			'posts_per_page' => -1,
+			'orderby' => 'date',
+			'post_status' => 'publish',
+			'order'=> 'DESC'
+	);
+	
+	$raw=get_posts($args);
+	
+	$data = array();
+	
+	foreach($raw as $p){
+		$_gp=get_post_meta($p->ID,'_phmsg_item');
+		$phmsg_group=array();
+		
+		foreach($_gp as $_item){
+			$_tmp_item=json_decode($_item);
+			
+			$_tmp_item->title=urldecode($_tmp_item->title);
+			$_tmp_item->pic=urldecode($_tmp_item->pic);
+			$_tmp_item->des=urldecode($_tmp_item->des);
+			$_tmp_item->url=urldecode($_tmp_item->url);
+		
+			$phmsg_group[]=$_tmp_item;
+		}
+		$tmp_key=trim(get_post_meta($p->ID,'_keyword',TRUE));
+		$array_key=explode(',', $tmp_key);
+		
+		
+		$tmp_msg=new stdClass();
+		
+		$tmp_msg->title=$p->post_title;
+		$tmp_msg->type=get_post_meta($p->ID,'_type',TRUE);
+		$tmp_msg->key=$array_key;
+		$tmp_msg->trigger=get_post_meta($p->ID,'_trigger',TRUE);
+		$tmp_msg->msg=get_post_meta($p->ID,'_content',TRUE);
+		$tmp_msg->phmsg=$phmsg_group;
+	
+		$data[]=$tmp_msg;
+	}
+	
+	return $data;
 }
 ?>
