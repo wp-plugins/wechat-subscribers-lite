@@ -25,8 +25,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 特色：
 
 1. 无需安装任何其他程序，完全使用Wordpress原生支持。
-2. 便捷管理多种消息模版，可随时切换，数量不限。
-3. 多种消息模式，默认自动回复消息，关键词自动回复消息，订阅自动回复欢迎消息，都可以随时便捷更改。
+2. 便捷管理多种weixin消息模版，可随时切换，数量不限。
+3. 多种消息模式，默认自动回复消息，关键词自动回复消息，weixin订阅自动回复欢迎消息，都可以随时便捷更改。
 4. 自动检测关键词冲突。
 5. 自由设置设置纯文本消息，图文消息，可随时切换消息类型，排序。
 6. 图片上传管理都使用Wordpress原生图片管理器。
@@ -40,8 +40,8 @@ This is a simple WeChat public platform plug-in for subscription accounts. Curre
 Features:
 
 1. Absolutely no need any other framework to install. 
-2. Easy to manage multiple message template.
-3. Multiple message type, default reply message, trigger by keywords and new subscriber join in. you can switch thier types any time.
+2. Easy to manage multiple weixin message template.
+3. Multiple message type, default reply message, trigger by keywords and new weixin subscriber join in. you can switch thier types any time.
 4. Automatic check keywords conflict.
 5. Free to set message type any time. both text message and graphic news message.
 6. Use native wordpress media manage tool to upload pitcures.
@@ -72,16 +72,17 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> get full help.
 
 == Screenshots ==
-1. ![screenshot](/assets/screenshot-1.png)
-2. ![screenshot](/assets/screenshot-2.png)
-3. ![screenshot](/assets/screenshot-3.png)
-4. ![screenshot](/assets/screenshot-4.png)
-5. ![screenshot](/assets/screenshot-5.png)
-6. ![screenshot](/assets/screenshot-6.png)
-7. ![screenshot](/assets/screenshot-7.png)
-8. ![screenshot](/assets/screenshot-8.png)
-9. ![screenshot](/assets/screenshot-9.png)
-10. ![screenshot](/assets/screenshot-10.png)
+
+1. 安装后激活插件，左侧的菜单中会出现一微信一栏。![screenshot](/assets/screenshot-1.png) 
+2. 在Wordpress的设置菜单中多了微信一项，到这里设置你的Token，这个可以随便写，字母、符号、数字都可以，汉字的不要。 ![screenshot](/assets/screenshot-2.png)
+3. 然后去微信公众平台上绑定你所设置的Token和URL。 ![screenshot](/assets/screenshot-3.png)
+4. 回到插件的微信管理界面，在这里可以添加消息模版，这些消息模版会根据条件自动回复给向你的微信公众号发消息的订阅者。 ![screenshot](/assets/screenshot-4.png)
+5. 添加或者编辑一条新消息模版时，首先设置基本项目。关键字可以多个，但是要用“,”逗号隔开。选择触发方式中除了关键词，还可以选择“默认”那么当没有任何关键字匹配的时候就会使用这条默认发送，而选择“订阅”则这条消息会在新订阅者加入以后触发。选择消息类型可以切换“纯文本”或是“图文消息”。最后要记得勾选“发布”，这样保存以后系统就会按照设置的规则自动回复用户消息了。![screenshot](/assets/screenshot-5.png)
+6. 纯文本消息很简单，只要输入你的消息文字即可。 ![screenshot](/assets/screenshot-6.png)
+7. 编辑图文消息的时候，必要选择一张图片，第一组图文内容的图片尺寸是360x200，这里的消息简述则可以选填。 ![screenshot](/assets/screenshot-7.png)
+8. 上传图片的时候将使用Wordprss原生的图片上传工具。传完以后选一个即可。 ![screenshot](/assets/screenshot-8.png)
+9. 图文消息可以添加最多9组，点击右下角的按钮添加。 ![screenshot](/assets/screenshot-9.png)
+10. 单组图文消息可以点击右上角的箭头上下移动，依次来排列消息的顺序。点击每组图文消息右下角的移除按钮可以去掉这组内容 ![screenshot](/assets/screenshot-10.png)
 
 == Changelog ==
 =汉语=
