@@ -15,13 +15,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 =汉语=
 
 这是一个简单通用的微信公众平台订阅号专用插件。现在这个版本的插件只支持普通订阅号，任何人只要以个人身份免费注册微信公众平台就可以足以使用这个插件的全部功能，不需要转门为了这个插件去付费获得公众号认证。
-
-“请求URL超时” 验证无法通过的问题，貌似已经修正了。
-
-图文消息后，中文转换编码错误的问题也修正了。
-
 如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
 我将尽可能在每月的第一周发布新版本更新。
+
+“请求URL超时” 验证无法通过的问题，又一次更好的修正了!! 感谢Limit Lin的帮助。
+
+图文消息后，中文转换编码错误的问题也修正了。
 
 我的Wordpress插件将永久免费：）
 
@@ -89,6 +88,10 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 == Changelog ==
 =汉语=
 
+2014年3月14日 更新到 1.04
+
+1. 修正了微信接口参数排序修改导致了无法响应的问题。
+
 2014年3月12日 更新到 1.03
 
 1. 修正了 “请求URL超时” 的问题。
@@ -105,7 +108,12 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 
 =English=
 
-2014 March 9 Update to 1.03
+2014 March 14 Update to 1.04
+
+1. Fixed WeChat callback sort parameter cause no response problem.
+
+
+2014 March 12 Update to 1.03
 
 1. Fixed URL Time Out problem.
 2. Add Token character limited
