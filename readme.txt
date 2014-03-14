@@ -9,8 +9,6 @@ Stable tag: 3.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-专门为微信(weixin)公众平台免费订阅号定制的Wordpress插件。永久免费！
-
 == Description ==
 
 =汉语=
