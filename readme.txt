@@ -1,0 +1,133 @@
+=== WeChat Subscribers Lite ===
+Contributors: redyyu
+Tags: weixin,wechat,subscribers,微信,微信公众平台,订阅号
+Donate link: http://www.imredy.com/wp_wechat/
+Requires at least: 3.7
+Tested up to: 3.8.1
+Stable tag: 3.8.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+专门为微信公众平台免费订阅号定制的Wordpress插件。永久免费！
+
+== Description ==
+
+=汉语=
+
+这是一个简单通用的微信公众平台订阅号专用插件。现在这个版本的插件只支持普通订阅号，任何人只要以个人身份免费注册微信公众平台就可以足以使用这个插件的全部功能，不需要转门为了这个插件去付费获得公众号认证。
+如果任何人有什么新功能需求，欢迎朝我发送电子邮件。<a href="mailto:redy.ru@gmail.com">redy.ru@gmail.com</a>
+我将尽可能在每月的第一周发布新版本更新。
+
+“请求URL超时” 验证无法通过的问题，又一次更好的修正了!! 感谢Limit Lin的帮助。
+
+图文消息后，中文转换编码错误的问题也修正了。
+
+我的Wordpress插件将永久免费：）
+
+特色：
+
+1. 无需安装任何其他程序，完全使用Wordpress原生支持。
+2. 便捷管理多种消息模版，可随时切换，数量不限。
+3. 多种消息模式，默认自动回复消息，关键词自动回复消息，订阅自动回复欢迎消息，都可以随时便捷更改。
+4. 自动检测关键词冲突。
+5. 自由设置设置纯文本消息，图文消息，可随时切换消息类型，排序。
+6. 图片上传管理都使用Wordpress原生图片管理器。
+
+访问插件主页获得更多帮助: <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a>.
+
+=English=
+
+This is a simple WeChat public platform plug-in for subscription accounts. Current version of the plug-in now supports ordinary subscription account only, anyone Register free WeChat public platform with subscription account can get full functionality of this plug-in, no need pay for a certified to upgrade your account.
+
+Features:
+
+1. Absolutely no need any other framework to install. 
+2. Easy to manage multiple message template.
+3. Multiple message type, default reply message, trigger by keywords and new subscriber join in. you can switch thier types any time.
+4. Automatic check keywords conflict.
+5. Free to set message type any time. both text message and graphic news message.
+6. Use native wordpress media manage tool to upload pitcures.
+
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a>.
+
+
+== Installation ==
+=汉语=
+
+1. 下载走。
+2. 复制到Wordpress的插件目录，例如: /wp-content/plugins
+3. 玩儿者吧！
+
+请访问 <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> 获得帮助.
+
+=English=
+
+1. Download it.
+2. Copy to your wordpress plugins folder etc., /wp-content/plugins
+3. Enjoy it.
+
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> get full help.
+
+== Frequently Asked Questions ==
+请访问 <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> 获得帮助.
+
+Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_wechat</a> get full help.
+
+== Screenshots ==
+1. ![screenshot](/assets/screenshot-1.png)
+2. ![screenshot](/assets/screenshot-2.png)
+3. ![screenshot](/assets/screenshot-3.png)
+4. ![screenshot](/assets/screenshot-4.png)
+5. ![screenshot](/assets/screenshot-5.png)
+6. ![screenshot](/assets/screenshot-6.png)
+7. ![screenshot](/assets/screenshot-7.png)
+8. ![screenshot](/assets/screenshot-8.png)
+9. ![screenshot](/assets/screenshot-9.png)
+10. ![screenshot](/assets/screenshot-10.png)
+
+== Changelog ==
+=汉语=
+
+2014年3月14日 更新到 1.04
+
+1. 修正了微信接口参数排序修改导致了无法响应的问题。
+
+2014年3月12日 更新到 1.03
+
+1. 修正了 “请求URL超时” 的问题。
+2. 增加了Token最大字符数量限制。
+
+2014年3月9日 更新到 1.02
+
+1. 修正了一些文本错误。
+2. 修正当输入图文消息后，中文转换编码错误的问题。
+
+2014年3月5日 更新到 1.01
+
+1. 修正了设置TOKEN时候可能误输入奇葩字符导致接口URL错误的问题。
+
+=English=
+
+2014 March 14 Update to 1.04
+
+1. Fixed WeChat callback sort parameter cause no response problem.
+
+
+2014 March 12 Update to 1.03
+
+1. Fixed URL Time Out problem.
+2. Add Token character limited
+
+
+2014 March 9 Update to 1.02
+
+1. Fixed some text issues.
+2. Fixed json_encode() Chinese text unicode issues.
+
+2014 March 5 Update to 1.01
+
+1. Fix strange symbol in 'token' will mass up interface url.
+
+== Upgrade Notice ==
+Update to 1.02
+Update to 1.01
