@@ -1,6 +1,7 @@
-=== WeChat Subscribers Lite ===
+=== WeChat Subscribers Lite 微信订阅号 ===
+Name: WeChat Subscribers Lite 微信订阅号
 Contributors: redyyu
-Tags: weixin,wechat,subscribers,微信,微信公众平台,订阅号
+Tags: weixin,wechat,subscribers,微信,微信公众平台,订阅号,wx
 Donate link: http://www.imredy.com/wp_wechat/
 Requires at least: 3.7
 Tested up to: 3.8.1
@@ -8,7 +9,7 @@ Stable tag: 3.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-专门为微信公众平台免费订阅号定制的Wordpress插件。永久免费！
+专门为微信(weixin/wechat)公众平台免费订阅号定制的Wordpress插件。永久免费！
 
 == Description ==
 
