@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WeChat Subscribers Lite 微信订阅号插件
+ * Plugin Name: WeChat Subscribers Lite
  * Plugin URI: http://www.imredy.com/wp_wechat/
  * Description: 轻便易用的微信(weixin)公众平台订阅号管理工具。Light weight WeChat (Subscribers) public platform management tool. 
  * Version: 1.04
