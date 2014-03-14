@@ -10,6 +10,9 @@
  * Text Domain: WPWSL
  * Domain Path: /languages
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 define('WPWSL_PLUGIN_URL', plugins_url('', __FILE__));
 define('WPWSL_GENERAL_PAGE', 'wpwsl-general-page');
 define('WPWSL_SETTINGS_PAGE', 'wpwsl-settings-page');
