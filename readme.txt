@@ -103,8 +103,10 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 
 == Changelog ==
 =汉语=
+
 2014年7月30日 更新到 1.50
-1. 增加了编辑自定义消息的时候选择已有的文章或页面插入到文字类型的内容中或同步到图文模板，在图文模板中也可以选择只插入文章或页面的URL。
+
+1. 增加了编辑自定义消息的时候选择已有的各种类型文章“同步”或者“插入”到微信回复中。
 2. 增加了最近消息回复回复类型
 3. 增加了图片上传时自动裁剪至适合微信显示的尺寸。
 4. 增加了用户访问统计管理
@@ -128,10 +130,12 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 1. 修正了设置TOKEN时候可能误输入奇葩字符导致接口URL错误的问题。
 
 =English=
+
 2014 July 30 Update to 1.50
-1. Adds the function that choose a existing article or page insert to the form when editing a custom message, it's also could just insert the URL of atricle or page in wordpress.
+
+1. Add multiple types Posts insert/sync to a custom Wexin/WeCchat reply message.
 2. Increase the types of recent news Reply 
-3. Increased upload pictures automatically cropped to fit the wechat display size. 
+3. Increased upload pictures automatically cropped to fit the Wexin/WeChat display size. 
 4. Increased user access statistics management
 
 2014 March 14 Update to 1.04
