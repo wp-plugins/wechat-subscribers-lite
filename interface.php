@@ -93,7 +93,7 @@ class wechatCallbackapi{
 	private function saveKeyWord($fromUsername,$keyword,$match){
         $messageRow = array("openid"=>$fromUsername,"keyword"=>$keyword,"is_match"=>$match,"time"=>current_time("Y-m-d H:i:s",0));
         global $wpdb;
-		$rows_affected = $wpdb->insert("wechat_subscribers_lite_history",$messageRow);
+		$rows_affected = $wpdb->insert(DB_TABLE_WPWSL_HISTORY,$messageRow);
 	}
 
 
@@ -265,10 +265,12 @@ class wechatCallbackapi{
 	    	$text = "";
 	    	$rimg = WPWSL_PLUGIN_URL."/img/".$imageSize.".png";;
 	    	if($type=="attachment"){
-	           $rimg = wp_get_attachment_image_src($post_id,$imageSize)[0];
+	    	   $tmp_img_obj= wp_get_attachment_image_src($post_id,$imageSize);
+	           $rimg = $tmp_img_obj[0];
 	    	}else{
 		    	if(get_the_post_thumbnail($post_id)!=''){
-				   $rimg = wp_get_attachment_image_src(get_post_thumbnail_id($post_id),$imageSize)[0];
+                    $tmp_img_obj=wp_get_attachment_image_src(get_post_thumbnail_id($post_id),$imageSize);
+                    $rimg = $tmp_img_obj[0];
 				}else{
 					$attachments = get_posts( array(
 						'post_type' => 'attachment',
@@ -277,7 +279,8 @@ class wechatCallbackapi{
 						'exclude'     => get_post_thumbnail_id($post_id)
 					));
 					if(count($attachments)>0){
-						$rimg=wp_get_attachment_image_src($attachments[0]->ID,$imageSize)[0];
+					    $tmp_img_obj=wp_get_attachment_image_src($attachments[0]->ID,$imageSize);
+						$rimg=$tmp_img_obj[0];
 					}
 				}	
 	    	}

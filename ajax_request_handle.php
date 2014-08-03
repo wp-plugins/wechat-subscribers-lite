@@ -55,7 +55,7 @@ function prefix_ajax_add_foobar(){
         
         //get posts
 	    $typeORcate = __('Category','WPWSL');
-	    $searchKeyInput = "";
+	    $searchKeyInput = '';
 		if(isset($_GET['key'])&&trim($_GET['key'])!=""){
             $str = urldecode($_GET['key']);
             $searchKeyInput = trim($_GET['key']);
@@ -80,13 +80,13 @@ function prefix_ajax_add_foobar(){
 		);
      switch ($_GET['rtype']) {
      	case 'posts':
-     		$button_value = __("Insert","WPWSL")."<span>".__(" Content","WPWSL")."</span>";
+     		$button_value = __('Insert','WPWSL').'<span>'.__(' Content','WPWSL').'</span>';
      		break;
      	case 'urls':
-     		$button_value = __("Insert","WPWSL")."<span>".__(" URL","WPWSL")."</span>";
+     		$button_value = __('Insert','WPWSL').'<span>'.__(' URL','WPWSL').'</span>';
      		break;
      	case 'phmsg':
-     		$button_value = __("Sync","WPWSL");
+     		$button_value = __('Sync','WPWSL');
      		break;
      }
      $args = array(
@@ -96,12 +96,12 @@ function prefix_ajax_add_foobar(){
 		$output = 'objects'; // names or objects, note names is the default
 		$operator = 'and'; // 'and' or 'or'
 		$_re_types= get_post_types( $args, $output, $operator ); 
-		$_post_types = "";
+		$_post_types = '';
         foreach ($_re_types as $key => $val){
         	     $selected=($key==$post_type)?'selected = "selected"':'';
         	     $_post_types .= '<option value="'.$key.'" class="select_type_choose"  '.$selected.'>'.$val->labels->name.'</option>';
         }	
-        $isCateShow = $post_type == "post" ? "" : "display:none;";
+        $isCateShow = $post_type == 'post' ? '' : 'display:none;';
 	_e('<input type="hidden" id="hidden_post_tid" value="'.$_GET['tid'].'">
 		<input type="hidden" id="hidden_post_type" value="'.$_GET['rtype'].'">
 		<input type="hidden" id="hidden_search_key" value="'.$searchKeyInput.'">
@@ -134,10 +134,10 @@ function prefix_ajax_add_foobar(){
 	    foreach ($posts_array as $key) {
 	    	$post_categories  =  wp_get_post_categories($key->ID);
 	    	if(count($post_categories)>0){
-	    	   $cats = "";
+	    	   $cats = '';
 				foreach($post_categories as $c){
 					$cat = get_category($c);
-					$cats .= ",".$cat->name;
+					$cats .= ','.$cat->name;
 				}
 				$cats = substr($cats,1);
 				if(isset($_GET['key'])){
@@ -147,13 +147,13 @@ function prefix_ajax_add_foobar(){
 	    		$cats = $key->post_type;
 	    		foreach($_re_types as $cat_key => $cat_val){
 	    			if($cat_key==$key->post_type){
-	    				$cats = "[".$cat_val->labels->name."]";
+	    				$cats = '['.$cat_val->labels->name.']';
 	    				break;
 	    			}
         	     
                 }	
 	    	}
-			if($i%2!=0) $trclass = "one";else $trclass = "two";
+			if($i%2!=0) $trclass = 'one';else $trclass = 'two';
 			$i++;
 	    	_e("<tr class='$trclass'><td>".$key->post_title."</td><td>".$cats."</td><td><div sytle='text-align:center;'>".$key->post_date."</div></td><td style='text-align:center;'><button type='button' class='button button-primary insert_content_to_input' postid='".$key->ID."' tid='".$targetID."'>".$button_value."</button></td></tr>");
 	    }
@@ -165,73 +165,72 @@ function prefix_ajax_add_foobar(){
 
 add_action( 'wp_ajax_get_insert_content', 'prefix_ajax_get_insert_content' );
 function prefix_ajax_get_insert_content(){
-
-	if($_GET['rtype']=="posts"){
+	if($_GET['rtype']=='posts'){
 	        $myrow = get_post($_GET['postid']);
 	        $post_categories  =  wp_get_post_categories($myrow->ID);
-	    	$cats = "";
+	    	$cats = '';
 			foreach($post_categories as $c){
 				$cat = get_category($c);
-				$cats .= ",".$cat->name;
+				$cats .= ','.$cat->name;
 			}
 			$cats = substr($cats,1);
-            $post_content = strip_tags($myrow->post_content);
-			$rpost = "#"
+	        $post_content = strip_tags($myrow->post_content);
+			$rpost = '#'
 			         .wp_trim_words(trim($myrow->post_title),SYNC_TITLE_LIMIT,'...' )
-			         ."#"
+			         .'#'
 			         .wp_trim_words(trim($post_content),SYNC_CONTENT_LIMIT,'...' )
-			         ."["
+			         .'['
 			         .$myrow->guid
-			         ."]["
+			         .']['
 			         .$myrow->post_date
-			         ."]";
+			         .']';
 			$r = array(
-				"status" => "success",
-				"data"   => $rpost
+				'status' => 'success',
+				'data'   => $rpost
 				);
-	}else if($_GET['rtype']=="urls"){
-        $myrow = get_post($_GET['postid']);
-        $r = array(
-        	"status"=>"success",
-            "data"  =>$myrow->guid
-        	);
-	}else if($_GET['rtype']=="phmsg"){
-		$imageSize = isset($_GET['imagesize'])&&$_GET['imagesize']=="small" ? "sup_wechat_small":"sup_wechat_big";
+	}else if($_GET['rtype']=='urls'){
+	    $myrow = get_post($_GET['postid']);
+	    $r = array(
+	    	'status'=>'success',
+	        'data'  =>$myrow->guid
+        );
+	}else if($_GET['rtype']=='phmsg'){
+		$imageSize = isset($_GET['imagesize'])&&$_GET['imagesize']=='small' ? 'sup_wechat_small':'sup_wechat_big';
 		$myrow = get_post($_GET['postid']);
-				
-				$myrow->pic = WPWSL_PLUGIN_URL."/img/".$imageSize.".png";
-				
-				if(get_the_post_thumbnail($_GET['postid'])!=''){
-				   $myrow->pic = wp_get_attachment_image_src(get_post_thumbnail_id($_GET['postid']),$imageSize)[0];
-
-				}else{			   
-					$attachments = get_posts( array(
-						'post_type' => 'attachment',
-						'posts_per_page' => -1,
-						'post_parent' => $_GET['postid'],
-						'exclude'     => get_post_thumbnail_id($_GET['postid'])
-					));
-					
-					if(count($attachments)>0){
-						$myrow->pic=wp_get_attachment_image_src($attachments[0]->ID,$imageSize)[0];
-					}
-				}
-                if(trim($myrow->post_excerpt)!=""){
-					$myrow->post_content = $myrow->post_excerpt;
-                }else{
-                    $_tmp_text = mb_substr(strip_tags($myrow->post_content),0,SYNC_EXCERPT_LIMIT,DB_CHARSET);
-                    $myrow->post_content = mb_strlen(strip_tags($myrow->post_content),DB_CHARSET)>SYNC_EXCERPT_LIMIT ? $_tmp_text."..." : $_tmp_text;
-				}
-				
-	
-        $r = array(
-        	"status"=>"success",
-            "data"  =>$myrow
-        	);   
+	    $myrow->pic = WPWSL_PLUGIN_URL.'/img/'.$imageSize.'.png';
+	    if(get_the_post_thumbnail($_GET['postid'])!=''){
+	       $tmp_img_obj= wp_get_attachment_image_src(get_post_thumbnail_id($_GET['postid']), $imageSize);
+	       print_r($tmp_img_obj[0]);
+	       $myrow->pic = $tmp_img_obj[0];
+	    }else{
+	    	$attachments = get_posts( array(
+	    		'post_type' => 'attachment',
+	    		'posts_per_page' => -1,
+	    		'post_parent' => $_GET['postid'],
+	    		'exclude'     => get_post_thumbnail_id($_GET['postid'])
+	    	));
+	    	
+	    	if(count($attachments)>0){
+	    	    $tmp_img_obj=wp_get_attachment_image_src($attachments[0]->ID,$imageSize);
+	    		$myrow->pic=$tmp_img_obj[0];
+	    	}
+	    }
+	    
+	    if(trim($myrow->post_excerpt)!=''){
+	    	$myrow->post_content = $myrow->post_excerpt;
+	    }else{
+	        $_tmp_text = mb_substr(strip_tags($myrow->post_content),0,SYNC_EXCERPT_LIMIT,DB_CHARSET);
+	        $myrow->post_content = mb_strlen(strip_tags($myrow->post_content),DB_CHARSET)>SYNC_EXCERPT_LIMIT ? $_tmp_text."..." : $_tmp_text;
+	    }
+	    
+	    $r = array(
+	    	'status'=>'success',
+	        'data'  => $myrow
+	    	);   
 	}else{
 		$r = array(
-				"status" => "error",
-				"data"   => "rtype error!"
+				'status' => 'error',
+				'data'   => 'rtype error!'
 				);
 	}
 	_e(json_encode($r));
