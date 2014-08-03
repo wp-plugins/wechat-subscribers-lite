@@ -197,6 +197,7 @@ Please visit <a href="http://www.imredy.com/wp_wechat">http://www.imredy.com/wp_
 1. Fix strange symbol in 'token' will mass up interface url.
 
 == Upgrade Notice ==
+Update to 1.53
 Update to 1.50
 Update to 1.02
 Update to 1.01
