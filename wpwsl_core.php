@@ -46,7 +46,7 @@ function create_history_table(){
     $sql = "CREATE TABLE $table_name (
     id bigint(20) NOT NULL KEY AUTO_INCREMENT,  
     openid   varchar(100) NOT NULL,
-    keyword  varchar(255) NOT NULL,
+    keyword  varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
     is_match char(1)   NOT NULL,
     time     datetime  NOT NULL
     );";
