@@ -21,7 +21,7 @@ define('WPWSL_SETTINGS_OPTION', 'wpwsl_settings_option');
 define('SELECT_ROWS_AMOUNT', 100);
 define('SYNC_TITLE_LIMIT', 80);
 define('SYNC_CONTENT_LIMIT', 500);
-define('SYNC_EXCERPT_LIMIT', 140);
+define('SYNC_EXCERPT_LIMIT', 100);
 define('MAX_SEARCH_LIMIT', 6);
 define('DB_TABLE_WPWSL_HISTORY', 'wechat_subscribers_lite_history');
 
