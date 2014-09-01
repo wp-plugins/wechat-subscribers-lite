@@ -3,7 +3,7 @@
  * Plugin Name: WeChat Subscribers Lite
  * Plugin URI: http://www.imredy.com/wp_wechat/
  * Description: 轻便易用的微信(weixin)公众平台订阅号管理工具。Light weight WeChat (Subscribers) public platform management tool.
- * Version: 1.56
+ * Version: 1.57
  * Author: Redy Ru, Gu Yue
  * Author URI: http://www.imredy.com/
  * License: GPLv2 or later
@@ -48,7 +48,6 @@ function load_interface(){
     }
 }
 
-
 //Languages
 add_action('plugins_loaded', 'load_languages_file');
 function load_languages_file(){
@@ -91,25 +90,28 @@ add_filter( 'image_size_names_choose', 'sup_wechat_custom_sizes' );
 //Setup Admin
 add_action('_admin_menu', 'wpwsl_admin_setup');
 function wpwsl_admin_setup(){
-	require_once( 'posttype_wpwsl_template.php' );
-	
-	$page_title=__('WeChat Subscribers Lite', 'WPWSL');
-	$menu_title=__('WeChat Subscribers Lite', 'WPWSL');
-	$capability='edit_posts';
-	$menu_slug=WPWSL_GENERAL_PAGE;
-	$function='';
-	$icon_url=WPWSL_PLUGIN_URL.'/img/wpwsl_icon_16.png';
-	add_object_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url );
-
-	require_once( 'class-wpwsl-settings.php' );
-	require_once( 'class-wpwsl-general.php' );
-	require_once( 'class-wpwsl-history.php' );
-	//Settings
-	$settingObject=WPWSL_Settings::get_instance();
-	//General
-	$generalObject=WPWSL_General::get_instance();
-	//History
-	$hitsotryObject=WPWSL_History::get_instance();
+     global $user_level;
+     if($user_level>=5){
+    	require_once( 'posttype_wpwsl_template.php' );
+    	
+    	$page_title=__('WeChat Subscribers Lite', 'WPWSL');
+    	$menu_title=__('WeChat Subscribers Lite', 'WPWSL');
+    	$capability='edit_pages';
+    	$menu_slug=WPWSL_GENERAL_PAGE;
+    	$function='';
+    	$icon_url=WPWSL_PLUGIN_URL.'/img/wpwsl_icon_16.png';
+    	add_object_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url );
+    
+    	require_once( 'class-wpwsl-settings.php' );
+    	require_once( 'class-wpwsl-general.php' );
+    	require_once( 'class-wpwsl-history.php' );
+    	//Settings
+    	$settingObject=WPWSL_Settings::get_instance();
+    	//General
+    	$generalObject=WPWSL_General::get_instance();
+    	//History
+    	$hitsotryObject=WPWSL_History::get_instance();
+    }
 }
 
 //AJAX handle
