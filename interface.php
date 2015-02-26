@@ -407,7 +407,7 @@ class wechatCallbackapi{
         if ($contentData['type']=="attachment"){
           $url = home_url('/?attachment_id='.$mediaObject->ID);
         }else{
-          $url = html_entity_decode($mediaObject->guid);
+          $url = html_entity_decode(get_permalink($mediaObject->ID));
         }
 
   			$itemStr .= sprintf($itemTpl, $title, $des, $media, $url);
